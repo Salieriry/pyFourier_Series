@@ -12,11 +12,12 @@ def fourier_series(t, A, w0, N, mode):
     if mode == 'triangular':
         for n in range(1, N + 1):
             n_indexes.append(n)
+            sign = (-1)**((n - 1) // 2)
             if n % 2 == 0:
                 wave_list.append(np.zeros_like(t))
                 An = 0.0
             else:
-                An = (8 * A) / (np.pi**2 * n**2)
+                An = sign * (8 * A) / (np.pi**2 * n**2)
                 Sinn = np.sin(n * w0 * t)
                 wave_list.append(An * Sinn)
                 
