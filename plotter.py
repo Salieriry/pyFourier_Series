@@ -29,4 +29,14 @@ def plot_waves_on_same_graph(t, wave_list, n_indexes):
     plt.grid(True)
     plt.legend()
     plt.show()  
+    
+def plot_wave_sum(t, x_t):
+    
+    plt.figure(figsize=(12, 6))
+    plt.plot(t, x_t, color='purple')
+    plt.title('Série de Fourier - Soma dos Harmônicos')
+    plt.xlabel('Tempo (s)')
+    plt.ylabel('Amplitude')
+    plt.grid(True)
+    plt.show()
 
