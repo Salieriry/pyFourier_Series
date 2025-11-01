@@ -36,3 +36,7 @@ def fourier_series(t, A, w0, N, mode):
             amplitude_spectrum.append(abs(An))
                 
     return wave_list
+
+def sum_waves(wave_list):
+    x_t = np.sum(wave_list, axis=0)
+    return x_t
