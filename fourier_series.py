@@ -1,11 +1,8 @@
 import numpy as np
 
-amplitude_spectrum = []
-n_indexes = []
-
 def fourier_series(t, A, w0, N, mode):
-    amplitude_spectrum.clear()
-    n_indexes.clear()
+    amplitude_spectrum = []
+    n_indexes = []
     
     wave_list = []
     
@@ -36,7 +33,7 @@ def fourier_series(t, A, w0, N, mode):
                 
             amplitude_spectrum.append(abs(An))
                 
-    return wave_list
+    return wave_list, n_indexes, amplitude_spectrum
 
 def sum_waves(wave_list):
     x_t = np.sum(wave_list, axis=0)
