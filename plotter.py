@@ -42,7 +42,7 @@ def plot_wave_sum(t, x_t):
     
 def plot_amplitude_spectrum(n_indexes, amplitude_spectrum):
     plt.figure(figsize=(10, 5))
-    plt.stem(n_indexes, amplitude_spectrum, basefmt=" ", use_line_collection=True)
+    plt.stem(n_indexes, amplitude_spectrum, basefmt=" ")
     plt.title('Espectro de Amplitude')
     plt.xlabel('Número do Harmônico (N)')
     plt.ylabel('Amplitude |An|')
