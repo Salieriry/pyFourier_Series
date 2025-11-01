@@ -15,4 +15,18 @@ def plot_fourier_series(t, wave_list, n_indexes, shared_ylim=False):
       
     fig.suptitle('Série de Fourier - Harmônicos Individuais', fontsize=16)
     plt.show()
+    
+def plot_waves_on_same_graph(t, wave_list, n_indexes):
+    plt.figure(figsize=(12, 6))
+    
+    for n, wave in zip(n_indexes, wave_list):
+        if n%2 != 0:
+            plt.plot(t, wave, label=f'N={n}')
+               
+    plt.title('Série de Fourier - Harmônicos no Mesmo Gráfico')
+    plt.xlabel('Tempo (s)')
+    plt.ylabel('Amplitude')
+    plt.grid(True)
+    plt.legend()
+    plt.show()  
 
